@@ -1,0 +1,146 @@
+2021-04-13 05:48:59PM - Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\john.l.a.zabanal\Documents\Laurence file\Lenovo\Debit Balance Refresh\Executable\Python Executable 2\src\process.py", line 79, in analyze
+    DB_WorkingFile_agg = DatasetUpdate(refresh_type,DebitBalance_Historical,DebitBalance_CurrentMonth)
+  File "C:\Users\john.l.a.zabanal\Documents\Laurence file\Lenovo\Debit Balance Refresh\Executable\Python Executable 2\src\process.py", line 32, in DatasetUpdate
+    database_data.loc[database_data['Reference Current Date'].isin(current_data['Reference Current Date']), cols] = current_data[cols]
+  File "C:\Users\john.l.a.zabanal\AppData\Local\Continuum\anaconda3\envs\env\lib\site-packages\pandas\core\frame.py", line 2912, in __getitem__
+    indexer = self.loc._get_listlike_indexer(key, axis=1, raise_missing=True)[1]
+  File "C:\Users\john.l.a.zabanal\AppData\Local\Continuum\anaconda3\envs\env\lib\site-packages\pandas\core\indexing.py", line 1254, in _get_listlike_indexer
+    self._validate_read_indexer(keyarr, indexer, axis, raise_missing=raise_missing)
+  File "C:\Users\john.l.a.zabanal\AppData\Local\Continuum\anaconda3\envs\env\lib\site-packages\pandas\core\indexing.py", line 1304, in _validate_read_indexer
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['AgingBucket', 'Date SOM', 'Aging', 'Reference Doc Date', 'Unique', 'Reference Entry Date', 'DebitCreditTag'] not in index"
+2021-08-04 12:29:02AM - Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\john.myrrh.d.cabela\Accenture\Zabanal, John L. A. - Lenovo Debit Balance Executable\Python Executable 2\src\process.py", line 119, in analyze
+    DebitBalance_Historical = pd.read_excel(DebitBalance_Historical_path,'Historical')
+  File "C:\Users\JOHNMY~1.CAB\ACCENT~1\ZABANA~1.-LE\PYTHON~1\debEnv\lib\site-packages\pandas\util\_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JOHNMY~1.CAB\ACCENT~1\ZABANA~1.-LE\PYTHON~1\debEnv\lib\site-packages\pandas\io\excel\_base.py", line 364, in read_excel
+    io = ExcelFile(io, storage_options=storage_options, engine=engine)
+  File "C:\Users\JOHNMY~1.CAB\ACCENT~1\ZABANA~1.-LE\PYTHON~1\debEnv\lib\site-packages\pandas\io\excel\_base.py", line 1233, in __init__
+    self._reader = self._engines[engine](self._io, storage_options=storage_options)
+  File "C:\Users\JOHNMY~1.CAB\ACCENT~1\ZABANA~1.-LE\PYTHON~1\debEnv\lib\site-packages\pandas\io\excel\_openpyxl.py", line 521, in __init__
+    import_optional_dependency("openpyxl")
+  File "C:\Users\JOHNMY~1.CAB\ACCENT~1\ZABANA~1.-LE\PYTHON~1\debEnv\lib\site-packages\pandas\compat\_optional.py", line 118, in import_optional_dependency
+    raise ImportError(msg) from None
+ImportError: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+2022-08-31 03:56:58AM - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2022-08-31 03:56:58AM - NumExpr defaulting to 8 threads.
+2022-08-31 03:59:43AM - Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\elaiza.padilla\OneDrive - Accenture\Documents\BSC Intake Optimization\Data Preprocessing Tool\src\process.py", line 64, in analyze
+    master[required_columns].to_excel(output_path + "Staffing_Optimization.xlsx", index=False)
+  File "C:\Users\elaiza.padilla\AppData\Roaming\Python\Python38\site-packages\pandas\core\generic.py", line 2175, in to_excel
+    formatter.write(
+  File "C:\Users\elaiza.padilla\AppData\Roaming\Python\Python38\site-packages\pandas\io\formats\excel.py", line 738, in write
+    writer.save()
+  File "C:\Users\elaiza.padilla\AppData\Roaming\Python\Python38\site-packages\pandas\io\excel\_openpyxl.py", line 43, in save
+    return self.book.save(self.path)
+  File "C:\Users\elaiza.padilla\AppData\Roaming\Python\Python38\site-packages\openpyxl\workbook\workbook.py", line 392, in save
+    save_workbook(self, filename)
+  File "C:\Users\elaiza.padilla\AppData\Roaming\Python\Python38\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+  File "C:\Users\elaiza.padilla\Anaconda3\lib\zipfile.py", line 1251, in __init__
+    self.fp = io.open(file, filemode)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/elaiza.padilla/OneDrive - Accenture/Documents/BSC Intake Optimization/Data\\_PREPROCESSED\\Staffing_Optimization.xlsx'
+2022-08-31 04:02:26AM - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2022-08-31 04:02:26AM - NumExpr defaulting to 8 threads.
+2022-09-01 12:25:13AM - Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\elaiza.padilla\OneDrive - Accenture\Documents\BSC Intake Optimization\Data Preprocessing Tool\src\process.py", line 33, in analyze
+    ref_TAT, ref_BD, ref_AHT = ref_files_access.get_ref_files(data_dump)
+  File "C:\Users\elaiza.padilla\OneDrive - Accenture\Documents\BSC Intake Optimization\Data Preprocessing Tool\src\ref_files_access.py", line 5, in get_ref_files
+    ref_TAT = helper_functions.read_file(data_path=data_dump+"\\References\\", data_file="image_lookups.xlsx", sheet_name='tat')
+  File "C:\Users\elaiza.padilla\OneDrive - Accenture\Documents\BSC Intake Optimization\Data Preprocessing Tool\src\helper_functions.py", line 15, in read_file
+    df = pd.read_excel(data_path + data_file, sheet_name=sheet_name, skiprows=skiprows)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\util\_decorators.py", line 296, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\io\excel\_base.py", line 304, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\io\excel\_base.py", line 867, in __init__
+    self._reader = self._engines[engine](self._io)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\io\excel\_xlrd.py", line 21, in __init__
+    import_optional_dependency("xlrd", extra=err_msg)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\compat\_optional.py", line 110, in import_optional_dependency
+    raise ImportError(msg) from None
+ImportError: Missing optional dependency 'xlrd'. Install xlrd >= 1.0.0 for Excel support Use pip or conda to install xlrd.
+2022-09-01 12:25:23AM - Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\elaiza.padilla\OneDrive - Accenture\Documents\BSC Intake Optimization\Data Preprocessing Tool\src\process.py", line 33, in analyze
+    ref_TAT, ref_BD, ref_AHT = ref_files_access.get_ref_files(data_dump)
+  File "C:\Users\elaiza.padilla\OneDrive - Accenture\Documents\BSC Intake Optimization\Data Preprocessing Tool\src\ref_files_access.py", line 5, in get_ref_files
+    ref_TAT = helper_functions.read_file(data_path=data_dump+"\\References\\", data_file="image_lookups.xlsx", sheet_name='tat')
+  File "C:\Users\elaiza.padilla\OneDrive - Accenture\Documents\BSC Intake Optimization\Data Preprocessing Tool\src\helper_functions.py", line 15, in read_file
+    df = pd.read_excel(data_path + data_file, sheet_name=sheet_name, skiprows=skiprows)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\util\_decorators.py", line 296, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\io\excel\_base.py", line 304, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\io\excel\_base.py", line 867, in __init__
+    self._reader = self._engines[engine](self._io)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\io\excel\_xlrd.py", line 21, in __init__
+    import_optional_dependency("xlrd", extra=err_msg)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\compat\_optional.py", line 110, in import_optional_dependency
+    raise ImportError(msg) from None
+ImportError: Missing optional dependency 'xlrd'. Install xlrd >= 1.0.0 for Excel support Use pip or conda to install xlrd.
+2022-09-01 12:25:47AM - Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\elaiza.padilla\OneDrive - Accenture\Documents\BSC Intake Optimization\Data Preprocessing Tool\src\process.py", line 33, in analyze
+    ref_TAT, ref_BD, ref_AHT = ref_files_access.get_ref_files(data_dump)
+  File "C:\Users\elaiza.padilla\OneDrive - Accenture\Documents\BSC Intake Optimization\Data Preprocessing Tool\src\ref_files_access.py", line 5, in get_ref_files
+    ref_TAT = helper_functions.read_file(data_path=data_dump+"\\References\\", data_file="image_lookups.xlsx", sheet_name='tat')
+  File "C:\Users\elaiza.padilla\OneDrive - Accenture\Documents\BSC Intake Optimization\Data Preprocessing Tool\src\helper_functions.py", line 15, in read_file
+    df = pd.read_excel(data_path + data_file, sheet_name=sheet_name, skiprows=skiprows)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\util\_decorators.py", line 296, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\io\excel\_base.py", line 304, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\io\excel\_base.py", line 867, in __init__
+    self._reader = self._engines[engine](self._io)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\io\excel\_xlrd.py", line 21, in __init__
+    import_optional_dependency("xlrd", extra=err_msg)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\compat\_optional.py", line 110, in import_optional_dependency
+    raise ImportError(msg) from None
+ImportError: Missing optional dependency 'xlrd'. Install xlrd >= 1.0.0 for Excel support Use pip or conda to install xlrd.
+2022-09-01 12:25:56AM - Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\elaiza.padilla\OneDrive - Accenture\Documents\BSC Intake Optimization\Data Preprocessing Tool\src\process.py", line 33, in analyze
+    ref_TAT, ref_BD, ref_AHT = ref_files_access.get_ref_files(data_dump)
+  File "C:\Users\elaiza.padilla\OneDrive - Accenture\Documents\BSC Intake Optimization\Data Preprocessing Tool\src\ref_files_access.py", line 5, in get_ref_files
+    ref_TAT = helper_functions.read_file(data_path=data_dump+"\\References\\", data_file="image_lookups.xlsx", sheet_name='tat')
+  File "C:\Users\elaiza.padilla\OneDrive - Accenture\Documents\BSC Intake Optimization\Data Preprocessing Tool\src\helper_functions.py", line 15, in read_file
+    df = pd.read_excel(data_path + data_file, sheet_name=sheet_name, skiprows=skiprows)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\util\_decorators.py", line 296, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\io\excel\_base.py", line 304, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\io\excel\_base.py", line 867, in __init__
+    self._reader = self._engines[engine](self._io)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\io\excel\_xlrd.py", line 21, in __init__
+    import_optional_dependency("xlrd", extra=err_msg)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\compat\_optional.py", line 110, in import_optional_dependency
+    raise ImportError(msg) from None
+ImportError: Missing optional dependency 'xlrd'. Install xlrd >= 1.0.0 for Excel support Use pip or conda to install xlrd.
+2022-09-01 12:27:42AM - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2022-09-01 12:27:42AM - NumExpr defaulting to 8 threads.
+2022-09-01 12:38:43AM - Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\elaiza.padilla\OneDrive - Accenture\Documents\BSC Intake Optimization\Data Preprocessing Tool\src\process.py", line 33, in analyze
+    ref_TAT, ref_BD, ref_AHT = ref_files_access.get_ref_files(data_dump)
+  File "C:\Users\elaiza.padilla\OneDrive - Accenture\Documents\BSC Intake Optimization\Data Preprocessing Tool\src\ref_files_access.py", line 5, in get_ref_files
+    ref_TAT = helper_functions.read_file(data_path=data_dump+"\\References\\", data_file="image_lookups.xlsx", sheet_name='tat')
+  File "C:\Users\elaiza.padilla\OneDrive - Accenture\Documents\BSC Intake Optimization\Data Preprocessing Tool\src\helper_functions.py", line 15, in read_file
+    df = pd.read_excel(data_path + data_file, sheet_name=sheet_name, skiprows=skiprows)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\util\_decorators.py", line 296, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\io\excel\_base.py", line 304, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\io\excel\_base.py", line 867, in __init__
+    self._reader = self._engines[engine](self._io)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\io\excel\_xlrd.py", line 21, in __init__
+    import_optional_dependency("xlrd", extra=err_msg)
+  File "C:\Users\elaiza.padilla\Anaconda3\envs\bsc_staffing_opti\lib\site-packages\pandas\compat\_optional.py", line 110, in import_optional_dependency
+    raise ImportError(msg) from None
+ImportError: Missing optional dependency 'xlrd'. Install xlrd >= 1.0.0 for Excel support Use pip or conda to install xlrd.

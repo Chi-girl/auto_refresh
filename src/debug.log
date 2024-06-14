@@ -1,0 +1,43 @@
+2021-05-06 06:22:09PM - Exception occurred
+Traceback (most recent call last):
+  File "process.py", line 249, in analyze
+  File "pandas\io\excel\_openpyxl.py", line 43, in save
+  File "openpyxl\workbook\workbook.py", line 407, in save
+  File "openpyxl\writer\excel.py", line 291, in save_workbook
+  File "zipfile.py", line 1113, in __init__
+PermissionError: [Errno 13] Permission denied: 'C:/Users/john.l.a.zabanal/Documents/Laurence file/Lenovo/Debit Balance Refresh/DebitBalance_Historical.xlsx'
+2021-05-06 06:32:03PM - Exception occurred
+Traceback (most recent call last):
+  File "process.py", line 85, in analyze
+  File "process.py", line 32, in DatasetUpdate
+  File "pandas\core\frame.py", line 2912, in __getitem__
+  File "pandas\core\indexing.py", line 1254, in _get_listlike_indexer
+  File "pandas\core\indexing.py", line 1304, in _validate_read_indexer
+KeyError: "['Vendor Name'] not in index"
+2021-05-06 06:35:49PM - Exception occurred
+Traceback (most recent call last):
+  File "process.py", line 76, in analyze
+  File "pandas\util\_decorators.py", line 296, in wrapper
+  File "pandas\io\excel\_base.py", line 304, in read_excel
+  File "pandas\io\excel\_base.py", line 867, in __init__
+  File "pandas\io\excel\_xlrd.py", line 22, in __init__
+  File "pandas\io\excel\_base.py", line 353, in __init__
+  File "pandas\io\excel\_xlrd.py", line 37, in load_workbook
+  File "xlrd\__init__.py", line 117, in open_workbook
+  File "zipfile.py", line 1131, in __init__
+  File "zipfile.py", line 1198, in _RealGetContents
+zipfile.BadZipFile: File is not a zip file
+2021-05-06 06:36:21PM - Exception occurred
+Traceback (most recent call last):
+  File "process.py", line 258, in analyze
+  File "interface.py", line 43, in progress
+  File "tkinter\__init__.py", line 344, in set
+RuntimeError: main thread is not in main loop
+2021-07-14 02:03:22AM - Exception occurred
+Traceback (most recent call last):
+  File "process.py", line 249, in analyze
+  File "pandas\io\excel\_openpyxl.py", line 43, in save
+  File "openpyxl\workbook\workbook.py", line 407, in save
+  File "openpyxl\writer\excel.py", line 291, in save_workbook
+  File "zipfile.py", line 1113, in __init__
+PermissionError: [Errno 13] Permission denied: 'C:/Users/john.l.a.zabanal/Documents/Laurence file/Lenovo/Debit Balance Refresh/DebitBalance_Historical.xlsx'
